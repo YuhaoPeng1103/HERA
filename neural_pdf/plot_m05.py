@@ -62,7 +62,7 @@ def plot_pdfs(d, m0, out):
         ax.set_xlabel("x")
     fig.suptitle("Q0 处 PDF：多观测量 + 关联系统误差 vs M0")
     fig.tight_layout()
-    fig.savefig(os.path.join(out, "pdf_q0_m05.png"), dpi=140)
+    fig.savefig(os.path.join(out, "pdf_q0_m05.png"), dpi=300)
     plt.close(fig)
 
 
@@ -92,7 +92,7 @@ def plot_observables(d, out, q2_show=4.0):
         ax.set_xlabel("x")
     fig.suptitle("多观测量联合拟合：伪数据、神经拟合带与真值")
     fig.tight_layout()
-    fig.savefig(os.path.join(out, "observables_m05.png"), dpi=140)
+    fig.savefig(os.path.join(out, "observables_m05.png"), dpi=300)
     plt.close(fig)
 
 
@@ -114,7 +114,7 @@ def plot_pulls(d, out):
         ax.legend(fontsize=8)
     fig.suptitle("各数据集 pulls（profile 掉关联系统误差后）")
     fig.tight_layout()
-    fig.savefig(os.path.join(out, "pulls_m05.png"), dpi=140)
+    fig.savefig(os.path.join(out, "pulls_m05.png"), dpi=300)
     plt.close(fig)
 
 
@@ -149,7 +149,7 @@ def plot_gS(d, npz_path, m0, out, x_target=1e-2):
     ax.grid(alpha=0.3)
     ax.legend(fontsize=8)
     fig.tight_layout()
-    fig.savefig(os.path.join(out, "gS_correlation_m05.png"), dpi=140)
+    fig.savefig(os.path.join(out, "gS_correlation_m05.png"), dpi=300)
     plt.close(fig)
 
 

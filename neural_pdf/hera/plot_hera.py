@@ -65,7 +65,7 @@ def main():
     fig.suptitle(f"HERA stress test ($LO$, $n_f=3$, $\\sigma_r\\simeq F_2$): "
                  f"$\\chi^2/N={chi2:.2f}$", fontsize=12)
     fig.tight_layout()
-    fig.savefig(args.out, dpi=160)
+    fig.savefig(args.out, dpi=300)
     plt.close(fig)
     print(f"已生成：{args.out}")
 

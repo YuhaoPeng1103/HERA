@@ -98,7 +98,7 @@ def main():
                  f"({summary['n_rep']} replicas each)", fontsize=12)
     fig.tight_layout()
     path = os.path.join(outdir, "multi_closure_summary.png")
-    fig.savefig(path, dpi=160)
+    fig.savefig(path, dpi=300)
     plt.close(fig)
 
     with open(os.path.join(outdir, "multi_closure_summary.json"), "w",

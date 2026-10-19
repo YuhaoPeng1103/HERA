@@ -146,7 +146,7 @@ def main():
     ax.legend(fontsize=8)
     fig.tight_layout()
     path = os.path.join(args.dir, "calibration_validation.png")
-    fig.savefig(path, dpi=160)
+    fig.savefig(path, dpi=300)
     plt.close(fig)
     print(f"已保存：{path} 与 calibration_validation.json")
 
