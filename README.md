@@ -62,12 +62,22 @@ neural_pdf/
 ├── calibration_validate.py  # kappa(k) calibration and independent validation
 ├── selfcheck.py             # numerical self-checks
 ├── plot_m05.py              # PDF/observable/pull figures
+├── tmd.py                   # toy Gaussian TMD + Collins–Soper broadening
 └── hera/
     ├── dglap_nf3.py         # LO n_f=3 evolution
     ├── hera_loader.py       # HEPData parser + full covariance
     ├── train_hera.py        # full-covariance fit
     └── plot_hera.py         # stress-test figure
 ```
+
+## TMD module
+
+`neural_pdf.tmd` provides a minimal, tested Gaussian TMD with a
+Collins–Soper broadening kernel: the input-scale Gaussian
+$\exp(-k_T^2/\langle k_T^2\rangle)/(\pi\langle k_T^2\rangle)$ evolves to
+$\langle k_T^2\rangle(Q)=\langle k_T^2\rangle(Q_0)+2g_2\ln(Q/Q_0)$.
+It is a scaffold for the TMD/EIC program, not a full TMD factorization
+implementation.
 
 ## Validation summary
 
