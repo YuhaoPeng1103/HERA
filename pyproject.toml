@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neural-pdf-toolkit"
+version = "0.1.0"
+description = "Differentiable neural PDF fitting with analytic correlated-systematic profiling and closure calibration"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Yuhao Peng" }]
+keywords = ["parton distribution functions", "QCD", "machine learning", "uncertainty quantification", "closure test"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = [
+  "numpy>=1.24",
+  "scipy>=1.10",
+  "torch>=2.0",
+  "matplotlib>=3.6",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.urls]
+Repository = "https://github.com/YuhaoPeng1103/HERA"
+
+[project.scripts]
+neural-pdf-selfcheck = "neural_pdf.selfcheck:main"
+neural-pdf-closure = "neural_pdf.multi_closure:main"
+neural-pdf-closure-summary = "neural_pdf.multi_closure_summary:main"
+neural-pdf-calibrate = "neural_pdf.calibration_validate:main"
+neural-pdf-hera-load = "neural_pdf.hera.hera_loader:main"
+neural-pdf-hera-fit = "neural_pdf.hera.train_hera:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["neural_pdf*"]
+
+[tool.setuptools.package-data]
+neural_pdf = ["data/*.csv"]

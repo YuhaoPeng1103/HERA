@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+outputs/
+.venv/
+venv/
+*.npz
+!neural_pdf/data/*.npz

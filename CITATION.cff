@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the accompanying paper."
+title: "neural-pdf-toolkit: differentiable neural PDF fitting and closure calibration"
+authors:
+  - family-names: "Peng"
+    given-names: "Yuhao"
+version: "0.1.0"
+date-released: "2026-10-20"
+url: "https://github.com/YuhaoPeng1103/HERA"
+license: "MIT"
